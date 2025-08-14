@@ -10,8 +10,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: CLIENT_ORIGIN,
-    methods: ['GET', 'POST']
+    origin: "https://intervue-polling-eight.vercel.app", // NO trailing slash
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
