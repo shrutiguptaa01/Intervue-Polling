@@ -16,7 +16,14 @@ const io = socketIo(server, {
 });
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://intervue-polling-eight.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // if cookies or auth headers are used
+  })
+);
 app.use(express.json());
 
 // In-memory state (simple demo store)
