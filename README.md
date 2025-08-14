@@ -68,14 +68,10 @@ Install project dependencies:
 1.npm install
 
 
-2.Start MongoDB service:
-
-mongod
+2.Start MongoDB service : mongod
 
 
-3.Run the backend server:
-
-npm start
+3.Run the backend server : npm start
 
 4.Running the Application
 
@@ -86,3 +82,4 @@ http://localhost:3000
 
 
 The frontend connects to this backend through Socket.IO for real-time updates and via API endpoints for creating polls, casting votes, and retrieving results.
+
